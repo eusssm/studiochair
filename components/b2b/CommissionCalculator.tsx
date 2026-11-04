@@ -1,8 +1,11 @@
 "use client";
 
 import { useId, useState } from "react";
+import { motion } from "framer-motion";
 import { euro } from "@/lib/format.ts";
 import { Arrow } from "@/components/ui";
+
+const EASE_EXPO = [0.16, 1, 0.3, 1] as const;
 
 export function CommissionCalculator() {
   const [appointmentsPerWeek, setAppointmentsPerWeek] = useState(60);
@@ -40,7 +43,13 @@ export function CommissionCalculator() {
   const decemberTreatwellCost = Math.round((decemberBookings * 0.25 * averagePrice * 0.35) + 49 + (decemberBookings * averagePrice * 0.5 * 0.02));
 
   return (
-    <div className="border-2 border-ink bg-card p-6 shadow-brutal-lg sm:p-10">
+    <motion.div
+      className="border-2 border-ink bg-card p-6 shadow-brutal-lg sm:p-10 transition-shadow duration-300 hover:shadow-[10px_10px_0_0_#0e0e0e]"
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-60px" }}
+      transition={{ duration: 0.7, ease: EASE_EXPO }}
+    >
       <div className="flex flex-wrap items-center justify-between gap-4 border-b-2 border-ink pb-6">
         <div>
           <span className="label-mono text-signal">Transparante vergelijking</span>
@@ -48,20 +57,26 @@ export function CommissionCalculator() {
         </div>
         <div className="flex items-center gap-2 font-mono text-xs font-bold uppercase">
           <span>Jouw StudioChair fee:</span>
-          <button
+          <motion.button
             type="button"
+            whileTap={{ scale: 0.96 }}
             onClick={() => setFeePerBooking(0.5)}
-            className={`brutal-press px-3 py-1.5 ${feePerBooking === 0.5 ? "bg-signal text-ink" : "bg-paper text-muted"}`}
+            className={`brutal-press px-3 py-1.5 transition-colors ${
+              feePerBooking === 0.5 ? "bg-signal text-ink" : "bg-paper text-muted"
+            }`}
           >
             € 0,50 / boeking
-          </button>
-          <button
+          </motion.button>
+          <motion.button
             type="button"
+            whileTap={{ scale: 0.96 }}
             onClick={() => setFeePerBooking(0.75)}
-            className={`brutal-press px-3 py-1.5 ${feePerBooking === 0.75 ? "bg-signal text-ink" : "bg-paper text-muted"}`}
+            className={`brutal-press px-3 py-1.5 transition-colors ${
+              feePerBooking === 0.75 ? "bg-signal text-ink" : "bg-paper text-muted"
+            }`}
           >
             € 0,75 / boeking
-          </button>
+          </motion.button>
         </div>
       </div>
 
@@ -114,18 +129,24 @@ export function CommissionCalculator() {
             </div>
           </div>
 
-          <div className="border-2 border-dashed border-ink/40 bg-paper p-4 font-mono text-xs text-muted space-y-1">
+          <motion.div
+            className="border-2 border-dashed border-ink/40 bg-paper p-4 font-mono text-xs text-muted space-y-1"
+            whileHover={{ borderColor: "rgba(14, 14, 14, 0.8)" }}
+          >
             <p className="font-bold text-ink">Wat kost een piekmaand (zoals december)?</p>
             <p>
               In december (~{decemberBookings} knipbeurten) betaal je bij Treatwell al snel <strong>€ {decemberTreatwellCost},-</strong>. 
               Bij StudioChair betaal je slechts <strong>€ {decemberStudiochairCost},-</strong> (de vaste €29 + €{feePerBooking.toFixed(2)} per boeking).
             </p>
-          </div>
+          </motion.div>
         </div>
 
         {/* Resultaat boxen */}
         <div className="flex flex-col justify-between gap-4">
-          <div className="border-2 border-ink bg-ink p-6 text-white shadow-brutal">
+          <motion.div
+            className="border-2 border-ink bg-ink p-6 text-white shadow-brutal transition-transform duration-200"
+            whileHover={{ y: -2 }}
+          >
             <div className="flex items-center justify-between">
               <span className="label-mono text-white/70">Kosten bij Treatwell per jaar</span>
               <span className="border border-white/40 bg-error/80 px-2 py-0.5 font-mono text-xs font-bold text-white uppercase">
@@ -138,9 +159,12 @@ export function CommissionCalculator() {
             <p className="mt-2 font-mono text-xs text-white/80">
               Gebaseerd op 35% commissie over nieuwe klanten, 2% online transactiekosten en de maandelijkse softwarefee.
             </p>
-          </div>
+          </motion.div>
 
-          <div className="border-2 border-ink bg-signal p-6 text-ink shadow-brutal">
+          <motion.div
+            className="border-2 border-ink bg-signal p-6 text-ink shadow-brutal transition-transform duration-200"
+            whileHover={{ y: -2 }}
+          >
             <div className="flex items-center justify-between">
               <span className="label-mono text-ink">Jouw netto besparing per jaar</span>
               <span className="border-2 border-ink bg-card px-2 py-0.5 font-mono text-xs font-bold uppercase">
@@ -156,15 +180,17 @@ export function CommissionCalculator() {
             <p className="mt-1 font-mono text-xs text-ink/80">
               Besparing over 3 jaar: <strong>{euro(threeYearSavingsCents, { short: true })}</strong>.
             </p>
-            <a
+            <motion.a
               href="#contact"
+              whileHover={{ y: -1 }}
+              whileTap={{ y: 2 }}
               className="brutal-press mt-5 inline-flex w-full items-center justify-center gap-2 border-2 border-ink bg-card py-3 font-mono text-sm font-bold uppercase shadow-brutal-sm"
             >
               Kies voor de eerlijke micro-fee <Arrow className="size-4" />
-            </a>
-          </div>
+            </motion.a>
+          </motion.div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
