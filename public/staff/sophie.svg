@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Sophie">
+  <rect width="200" height="200" fill="#F5F5F0"/>
+  <circle cx="100" cy="84" r="38" fill="#0E0E0E"/>
+  <path d="M30 200c0-44 31-70 70-70s70 26 70 70z" fill="#0E0E0E"/>
+  <rect x="0" y="0" width="200" height="200" fill="none" stroke="#0E0E0E" stroke-width="8"/>
+  <text x="14" y="34" font-family="monospace" font-size="22" font-weight="700" fill="#0E0E0E">S.</text>
+</svg>

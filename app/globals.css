@@ -1,0 +1,124 @@
+@import "tailwindcss";
+
+/* ─────────────────────────────────────────────────────────────
+   StudioChair design tokens — "Fris Neo-Brutalism"
+   Eén plek voor kleuren, type en schaduwen. Een ander salon-thema =
+   deze variabelen overschrijven (bv. [data-theme="japandi"]).
+   ───────────────────────────────────────────────────────────── */
+@theme {
+  --color-paper: #f5f5f0;
+  --color-card: #ffffff;
+  --color-ink: #0e0e0e;
+  --color-signal: #ff4500;
+  --color-muted: #55554f; /* 7.0:1 op paper — AA ok */
+  --color-line: #0e0e0e;
+  --color-success: #00a86b;
+  --color-error: #c4140c; /* 5.9:1 op wit */
+
+  --font-display: "Anton", "Impact", "Arial Narrow", sans-serif;
+  --font-sans: "Space Grotesk Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", monospace;
+
+  --shadow-brutal-sm: 2px 2px 0 0 var(--color-ink);
+  --shadow-brutal: 4px 4px 0 0 var(--color-ink);
+  --shadow-brutal-lg: 8px 8px 0 0 var(--color-ink);
+
+  --ease-snap: cubic-bezier(0.2, 0.9, 0.1, 1);
+}
+
+@layer base {
+  html {
+    background: var(--color-paper);
+    color: var(--color-ink);
+    -webkit-tap-highlight-color: transparent;
+    text-rendering: optimizeLegibility;
+  }
+  body {
+    font-family: var(--font-sans);
+    min-height: 100svh;
+  }
+  ::selection {
+    background: var(--color-signal);
+    color: var(--color-ink);
+  }
+  /* Zichtbare, dikke focus-ring (WCAG 2.2 — 2.4.11/2.4.13) */
+  :focus-visible {
+    outline: 3px solid var(--color-ink);
+    outline-offset: 3px;
+    box-shadow: 0 0 0 6px var(--color-signal);
+  }
+}
+
+/* Kaart: wit, 2px zwarte rand, harde offset-schaduw. */
+@utility brutal-card {
+  background: var(--color-card);
+  border: 2px solid var(--color-ink);
+  box-shadow: var(--shadow-brutal);
+}
+
+/* Voelbare knop: schuift 2px in bij klik, schaduw verdwijnt. */
+@utility brutal-press {
+  border: 2px solid var(--color-ink);
+  box-shadow: var(--shadow-brutal);
+  transition:
+    transform 90ms var(--ease-snap),
+    box-shadow 90ms var(--ease-snap),
+    background-color 120ms ease;
+  &:hover:not(:disabled) {
+    transform: translate(-1px, -1px);
+    box-shadow: 5px 5px 0 0 var(--color-ink);
+  }
+  &:active:not(:disabled) {
+    transform: translate(2px, 2px);
+    box-shadow: none;
+  }
+  &:disabled {
+    cursor: not-allowed;
+    box-shadow: none;
+    opacity: 0.45;
+  }
+}
+
+@utility display {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  line-height: 0.9;
+  letter-spacing: 0.005em;
+  font-weight: 400;
+}
+
+@utility label-mono {
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+@utility no-scrollbar {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Marquee-band */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.marquee-track {
+  animation: marquee 28s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .marquee-track { animation: none; }
+}
