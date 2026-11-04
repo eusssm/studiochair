@@ -95,7 +95,7 @@ export default function B2BHomePage() {
                   "Directe iDEAL aanbetaling",
                   "Google Calendar 2-weg sync",
                   "4-staps wizard",
-                  "DatoCMS dashboard",
+                  "Eenvoudig CMS dashboard",
                   "Jouw eigen merk",
                 ].map((w) => (
                   <span key={w} className="flex items-center gap-8">

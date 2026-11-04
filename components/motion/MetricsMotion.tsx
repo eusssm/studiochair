@@ -28,7 +28,7 @@ const METRICS: MetricItem[] = [
   },
   {
     label: "Content Beheer",
-    value: "DATOCMS",
+    value: "EIGEN CMS",
     sub: "Prijzen en team live zelf aanpassen.",
   },
 ];

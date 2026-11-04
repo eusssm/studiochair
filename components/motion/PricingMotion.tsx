@@ -37,7 +37,7 @@ export function PricingMotion() {
             <li className="flex items-center gap-2">✓ 4-staps boekingsflow gekoppeld</li>
             <li className="flex items-center gap-2">✓ Google Calendar 2-weg koppeling per stoel</li>
             <li className="flex items-center gap-2">✓ Mollie iDEAL aanbetalingen ingericht</li>
-            <li className="flex items-center gap-2">✓ DatoCMS dashboard & contenttraining</li>
+            <li className="flex items-center gap-2">✓ Eenvoudig CMS dashboard & uitleg</li>
             <li className="flex items-center gap-2">✓ Automatische e-mailbevestigingen + .ics</li>
           </ul>
         </div>
@@ -74,7 +74,7 @@ export function PricingMotion() {
           <ul className="mt-6 space-y-3 font-mono text-sm text-white/90">
             <li className="flex items-center gap-2">✓ Razendsnelle Vercel Edge hosting & SSL</li>
             <li className="flex items-center gap-2">✓ 24/7 continue agenda-synchronisatie</li>
-            <li className="flex items-center gap-2">✓ DatoCMS licentie & live beheer</li>
+            <li className="flex items-center gap-2">✓ CMS licentie & live beheer</li>
             <li className="flex items-center gap-2">✓ Geen 35% commissie bij nieuwe klanten</li>
             <li className="flex items-center gap-2">✓ Directe support van Studio Maaijen</li>
           </ul>

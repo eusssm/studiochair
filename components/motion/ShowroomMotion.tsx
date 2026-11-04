@@ -101,7 +101,7 @@ export function ShowroomMotion() {
           </div>
           <div className="flex justify-between border-b border-ink/20 pb-2">
             <span className="text-muted">CMS beheer:</span>
-            <span className="font-bold text-signal">DatoCMS Live</span>
+            <span className="font-bold text-signal">Eigen CMS Live</span>
           </div>
           <div className="flex justify-between">
             <span className="text-muted">Kosten per boeking:</span>

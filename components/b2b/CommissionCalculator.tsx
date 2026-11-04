@@ -29,7 +29,7 @@ export function CommissionCalculator() {
   const totalTreatwellYearlyCents = treatwellCommissionCents + treatwellMonthlySoftwareCents + treatwellProcessingCents;
 
   // StudioChair Micro-fee model:
-  // €29/mnd vast (hosting + agenda sync + DatoCMS) + gekozen microfee per boeking (€0,50 of €0,75)
+  // €29/mnd vast (hosting + agenda sync + CMS) + gekozen microfee per boeking (€0,50 of €0,75)
   const studiochairMonthlyBaseCents = 29 * 100 * 12;
   const studiochairBookingFeeCents = Math.round(yearlyBookings * feePerBooking * 100);
   const totalStudiochairYearlyCents = studiochairMonthlyBaseCents + studiochairBookingFeeCents;

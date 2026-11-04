@@ -43,13 +43,13 @@ sequenceDiagram
 
 ---
 
-## 3. Voor de Saloneigenaar: Medewerkers beheren in DatoCMS
+## 3. Voor de Saloneigenaar: Medewerkers beheren in het CMS
 
-Als saloneigenaar heb je toegang tot het gebruiksvriendelijke **DatoCMS dashboard**. Een nieuwe collega toevoegen of het rooster aanpassen kost minder dan 1 minuut:
+Als saloneigenaar heb je toegang tot het gebruiksvriendelijke **CMS dashboard**. Een nieuwe collega toevoegen of het rooster aanpassen kost minder dan 1 minuut:
 
 ### Een collega toevoegen (Stappenplan):
-1. Log in op jouw DatoCMS beheeromgeving.
-2. Ga in het menu naar **`Medewerkers` (SalonStaff)** en klik op **`Nieuw Record`**.
+1. Log in op jouw CMS beheeromgeving.
+2. Ga in het menu naar **`Medewerkers`** en klik op **`Nieuw Record`**.
 3. Vul de volgende velden in:
    * **Naam:** Bijv. *Marcus*, *Sophie* of *Dex*.
    * **Rol / Specialisme:** Bijv. *Master Barber*, *Senior Colorist* of *Allround Stylist*.
@@ -61,7 +61,7 @@ Als saloneigenaar heb je toegang tot het gebruiksvriendelijke **DatoCMS dashboar
 
 > [!TIP]
 > **Flexibel bij ziekte of vakantie:**  
-> Is een collega ziek, op vakantie of met verlof? Vink **Actief** uit in DatoCMS. De kapper verdwijnt direct uit de online boekingswizard. Bestaande afspraken in zijn Google Agenda blijven gewoon behouden.
+> Is een collega ziek, op vakantie of met verlof? Vink **Actief** uit in het CMS. De kapper verdwijnt direct uit de online boekingswizard. Bestaande afspraken in zijn Google Agenda blijven gewoon behouden.
 
 ---
 
@@ -147,7 +147,7 @@ Als een afspraak wordt geannuleerd (door de salon of via de link in de bevestigi
 * Komt het tijdslot direct weer vrij voor nieuwe boekingen op de website.
 
 ### Kunnen kappers verschillende behandeltijden hebben?
-In DatoCMS kun je per dienst de behandeltijd en eventuele pauze/inwerktijd instellen. Indien een kapper junior is of juist extra snel, kan dit op maat worden afgestemd.
+In het CMS kun je per dienst de behandeltijd en eventuele pauze/inwerktijd instellen. Indien een kapper junior is of juist extra snel, kan dit op maat worden afgestemd.
 
 ### Wat kost deze koppeling extra per maand?
 **Niets.** De Google Calendar 2-weg koppeling is standaard inbegrepen in het StudioChair pakket (€ 29,-/mnd basis + de eerlijke micro-fee van € 0,75 per boeking). Er zijn geen verborgen kosten per kapper of per stoel.

@@ -28,7 +28,7 @@ const PILLARS: Pillar[] = [
   },
   {
     num: "04",
-    title: "DatoCMS Contentbeheer",
+    title: "Eenvoudig CMS Beheer",
     body: "Prijzen verhogen, nieuwe behandeling toevoegen of een tijdelijke kapper inroosteren? Je regelt het zelf in een eenvoudig, professioneel CMS zonder technische kennis.",
   },
 ];
