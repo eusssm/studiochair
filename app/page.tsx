@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { Arrow, Badge, Eyebrow } from "@/components/ui";
 import { CommissionCalculator } from "@/components/b2b/CommissionCalculator";
@@ -74,27 +75,52 @@ export default function B2BHomePage() {
 
       <main id="main">
         {/* ── Hero ────────────────────────────────────────── */}
-        <section className="mx-auto max-w-6xl px-4 pb-16 pt-12 sm:px-6 lg:pt-20">
-          <div className="max-w-4xl">
-            <Eyebrow>Voor Kappers, Barbershops & Hair Stylists</Eyebrow>
-            <h1 className="display mt-4 text-[clamp(3.5rem,13vw,9.5rem)] leading-[0.88]">
-              GEEN 35% COMMISSIE.
-              <br />
-              <span className="relative inline-block text-ink">
-                EEN EERLIJKE MICRO-FEE.
-                <span aria-hidden className="absolute -bottom-1 left-0 -z-10 h-[0.3em] w-full bg-signal" />
-              </span>
-            </h1>
-            <p className="mt-8 max-w-2xl text-xl leading-relaxed text-ink/90 sm:text-2xl">
-              Stop met € 15,- tot € 25,- per nieuwe klant afdragen aan Treatwell. StudioChair levert een <strong>high-end salon-website</strong> en een <strong>4-staps planner</strong> voor slechts <strong>€ 0,75 per boeking</strong>. Zonder wurgcontracten, mét Google Calendar 2-weg synchronisatie en no-show borg.
-            </p>
-            <div className="mt-10 flex flex-wrap gap-4">
-              <Link href="/demo" className={`${ctaClass} bg-signal text-ink shadow-brutal`}>
-                Bekijk Live Demo (Atelier Eugène) <Arrow />
-              </Link>
-              <a href="#besparing" className={`${ctaClass} bg-card text-ink shadow-brutal`}>
-                Bereken Je Winst ↓
-              </a>
+        <section className="mx-auto max-w-6xl px-4 pb-16 pt-10 sm:px-6 lg:pt-16">
+          <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+            <div>
+              <Eyebrow>Voor Kappers, Barbershops & Hair Stylists</Eyebrow>
+              <h1 className="display mt-4 text-[clamp(3.2rem,8.5vw,7.5rem)] leading-[0.88]">
+                GEEN 35% COMMISSIE.
+                <br />
+                <span className="relative inline-block text-ink">
+                  EEN EERLIJKE MICRO-FEE.
+                  <span aria-hidden className="absolute -bottom-1 left-0 -z-10 h-[0.3em] w-full bg-signal" />
+                </span>
+              </h1>
+              <p className="mt-6 text-lg leading-relaxed text-ink/90 sm:text-xl">
+                Stop met € 15,- tot € 25,- per nieuwe klant afdragen aan Treatwell. StudioChair levert een <strong>high-end salon-website</strong> en een <strong>4-staps planner</strong> voor slechts <strong>€ 0,75 per boeking</strong>. Zonder wurgcontracten, mét Google Calendar 2-weg synchronisatie en no-show borg.
+              </p>
+              <div className="mt-8 flex flex-wrap gap-4">
+                <Link href="/demo" className={`${ctaClass} bg-signal text-ink shadow-brutal`}>
+                  Bekijk Live Demo (Atelier Eugène) <Arrow />
+                </Link>
+                <a href="#besparing" className={`${ctaClass} bg-card text-ink shadow-brutal`}>
+                  Bereken Je Winst ↓
+                </a>
+              </div>
+            </div>
+
+            {/* Hero Photo Card */}
+            <div className="relative">
+              <div className="relative rotate-1 border-2 border-ink bg-card p-3 shadow-brutal-lg transition-transform hover:rotate-0">
+                <div className="relative aspect-[16/10] overflow-hidden border-2 border-ink bg-ink">
+                  <Image
+                    src="/images/hero-barber.jpg"
+                    alt="Kapper aan het werk in een moderne salon met StudioChair"
+                    fill
+                    priority
+                    sizes="(min-width: 1024px) 45vw, 100vw"
+                    className="object-cover"
+                  />
+                  <div className="absolute bottom-3 left-3 border-2 border-ink bg-paper px-3 py-1 font-mono text-xs font-bold uppercase shadow-brutal-sm text-ink">
+                    ⚡ 100% Jouw Vakmanschap
+                  </div>
+                </div>
+                <div className="mt-3 flex items-center justify-between px-1 font-mono text-xs text-muted">
+                  <span>Jouw stoel, jouw agenda, jouw winst.</span>
+                  <span className="font-bold text-ink">0% Treatwell-tax</span>
+                </div>
+              </div>
             </div>
           </div>
 
