@@ -13,6 +13,13 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: { default: `${settings.name} — ${settings.tagline}`, template: `%s — ${settings.name}` },
     description: `Boek direct je stoel bij ${settings.name} in ${settings.address}. Kies behandeling, kapper en tijd — klaar.`,
+    icons: {
+      icon: [
+        { url: "/icon.svg", type: "image/svg+xml" },
+        { url: "/favicon.ico", sizes: "32x32" },
+      ],
+      apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
+    },
   };
 }
 

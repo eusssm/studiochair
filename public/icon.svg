@@ -1,0 +1,35 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' width='512' height='512'>
+  <!-- Dark Neo-Brutalist Tile -->
+  <rect x='16' y='16' width='480' height='480' rx='104' fill='#0E0E0E'/>
+  <rect x='24' y='24' width='464' height='464' rx='96' fill='none' stroke='#FF4500' stroke-width='10' opacity='0.35'/>
+
+  <!-- Headrest (Bold Orange) -->
+  <rect x='196' y='58' width='120' height='42' rx='12' fill='#FF4500' stroke='#FFFFFF' stroke-width='8'/>
+  <rect x='246' y='100' width='20' height='24' fill='#FFFFFF'/>
+
+  <!-- Backrest (Big Bold Orange Cushion) -->
+  <rect x='146' y='124' width='220' height='160' rx='24' fill='#FF4500' stroke='#FFFFFF' stroke-width='10'/>
+  <!-- Cushion vertical accent lines -->
+  <path d='M204 154 v100 M256 154 v100 M308 154 v100' stroke='#FFFFFF' stroke-width='8' stroke-linecap='round' opacity='0.6'/>
+
+  <!-- Sturdy Armrests -->
+  <path d='M100 236 h46 v42 h-46 a16 16 0 0 1 -16 -16 v-10 a16 16 0 0 1 16 -16 z' fill='#FFFFFF'/>
+  <path d='M366 236 h46 a16 16 0 0 1 16 16 v10 a16 16 0 0 1 -16 16 h-46 z' fill='#FFFFFF'/>
+
+  <!-- Seat Cushion (Wide & Chunky Orange) -->
+  <rect x='108' y='278' width='296' height='74' rx='20' fill='#FF4500' stroke='#FFFFFF' stroke-width='10'/>
+
+  <!-- Recline Lever -->
+  <path d='M400 350 l30 24' stroke='#FFFFFF' stroke-width='12' stroke-linecap='round'/>
+  <circle cx='435' cy='378' r='11' fill='#FF4500' stroke='#FFFFFF' stroke-width='6'/>
+
+  <!-- Hydraulic Stem -->
+  <rect x='238' y='352' width='36' height='50' fill='#FFFFFF'/>
+
+  <!-- Footrest Bar -->
+  <path d='M140 352 l-36 60 h76' fill='none' stroke='#FFFFFF' stroke-width='12' stroke-linecap='round' stroke-linejoin='round'/>
+
+  <!-- Heavy Chrome Base Plate with Orange Ring -->
+  <ellipse cx='256' cy='432' rx='140' ry='28' fill='#FFFFFF'/>
+  <ellipse cx='256' cy='426' rx='120' ry='20' fill='#FF4500'/>
+</svg>
