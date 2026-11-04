@@ -76,21 +76,21 @@ export default function B2BHomePage() {
       <main id="main">
         {/* ── Hero ────────────────────────────────────────── */}
         <section className="mx-auto max-w-6xl px-4 pb-16 pt-10 sm:px-6 lg:pt-16">
-          <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
-            <div>
-              <Eyebrow>Voor Kappers, Barbershops & Hair Stylists</Eyebrow>
-              <h1 className="display mt-4 text-[clamp(3.2rem,8.5vw,7.5rem)] leading-[0.88]">
-                GEEN 35% COMMISSIE.
-                <br />
-                <span className="relative inline-block text-ink">
-                  EEN EERLIJKE MICRO-FEE.
-                  <span aria-hidden className="absolute -bottom-1 left-0 -z-10 h-[0.3em] w-full bg-signal" />
-                </span>
-              </h1>
-              <p className="mt-6 text-lg leading-relaxed text-ink/90 sm:text-xl">
+          <div>
+            <Eyebrow>Voor Kappers, Barbershops & Hair Stylists</Eyebrow>
+            <h1 className="display mt-4 text-[clamp(3.5rem,10.5vw,8.5rem)] leading-[0.88]">
+              GEEN 35% COMMISSIE.
+              <br />
+              <span className="relative inline-block text-ink">
+                EEN EERLIJKE MICRO-FEE.
+                <span aria-hidden className="absolute -bottom-1 left-0 -z-10 h-[0.3em] w-full bg-signal" />
+              </span>
+            </h1>
+            <div className="mt-8 grid gap-6 md:grid-cols-[1fr_auto] md:items-end">
+              <p className="max-w-2xl text-xl leading-relaxed text-ink/90 sm:text-2xl">
                 Stop met € 15,- tot € 25,- per nieuwe klant afdragen aan Treatwell. StudioChair levert een <strong>high-end salon-website</strong> en een <strong>4-staps planner</strong> voor slechts <strong>€ 0,75 per boeking</strong>. Zonder wurgcontracten, mét Google Calendar 2-weg synchronisatie en no-show borg.
               </p>
-              <div className="mt-8 flex flex-wrap gap-4">
+              <div className="flex flex-wrap gap-4 md:flex-col md:items-stretch">
                 <Link href="/demo" className={`${ctaClass} bg-signal text-ink shadow-brutal`}>
                   Bekijk Live Demo (Atelier Eugène) <Arrow />
                 </Link>
@@ -99,33 +99,42 @@ export default function B2BHomePage() {
                 </a>
               </div>
             </div>
+          </div>
 
-            {/* Hero Photo Card */}
-            <div className="relative">
-              <div className="relative rotate-1 border-2 border-ink bg-card p-3 shadow-brutal-lg transition-transform hover:rotate-0">
-                <div className="relative aspect-[16/10] overflow-hidden border-2 border-ink bg-ink">
-                  <Image
-                    src="/images/hero-barber.jpg"
-                    alt="Kapper aan het werk in een moderne salon met StudioChair"
-                    fill
-                    priority
-                    sizes="(min-width: 1024px) 45vw, 100vw"
-                    className="object-cover"
-                  />
-                  <div className="absolute bottom-3 left-3 border-2 border-ink bg-paper px-3 py-1 font-mono text-xs font-bold uppercase shadow-brutal-sm text-ink">
-                    ⚡ 100% Jouw Vakmanschap
-                  </div>
+          {/* Grand Hero Photo Showcase */}
+          <div className="mt-10 sm:mt-12">
+            <div className="border-2 border-ink bg-card p-3 sm:p-4 shadow-brutal-lg">
+              <div className="relative aspect-[16/10] sm:aspect-[21/9] md:aspect-[16/7] w-full overflow-hidden border-2 border-ink bg-ink">
+                <Image
+                  src="/images/hero-barber.jpg"
+                  alt="Kapper aan het werk in een moderne salon met StudioChair"
+                  fill
+                  priority
+                  sizes="(min-width: 1280px) 1152px, 100vw"
+                  className="object-cover object-[center_35%]"
+                />
+                {/* Top-left sticker */}
+                <div className="absolute left-3 top-3 sm:left-5 sm:top-5 border-2 border-ink bg-signal px-3 py-1 font-mono text-xs font-bold uppercase tracking-wider text-ink shadow-brutal-sm">
+                  ⚡ 100% Jouw Vakmanschap
                 </div>
-                <div className="mt-3 flex items-center justify-between px-1 font-mono text-xs text-muted">
-                  <span>Jouw stoel, jouw agenda, jouw winst.</span>
-                  <span className="font-bold text-ink">0% Treatwell-tax</span>
+                {/* Bottom floating badge */}
+                <div className="absolute bottom-3 left-3 sm:bottom-5 sm:left-5 max-w-sm border-2 border-ink bg-paper/95 p-3 sm:p-4 backdrop-blur-sm shadow-brutal-sm">
+                  <p className="font-mono text-[0.68rem] font-bold uppercase tracking-wider text-signal">Geen Platform-Gijzeling</p>
+                  <p className="mt-1 font-sans text-xs sm:text-sm font-bold leading-snug text-ink">
+                    Jouw stoel, jouw agenda, 100% jouw winst. Slechts € 0,75 per boeking.
+                  </p>
+                </div>
+                {/* Bottom-right live showroom pill */}
+                <div className="hidden sm:flex absolute bottom-5 right-5 items-center gap-2 border-2 border-ink bg-ink px-3 py-1.5 font-mono text-xs font-bold uppercase text-white shadow-brutal-sm">
+                  <span className="size-2 rounded-full bg-signal" aria-hidden />
+                  <span>Referentie: Atelier Eugène</span>
                 </div>
               </div>
             </div>
           </div>
 
           {/* Quick Metrics Bar */}
-          <div className="mt-16 grid gap-4 border-2 border-ink bg-card p-6 shadow-brutal sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-10 grid gap-4 border-2 border-ink bg-card p-6 shadow-brutal sm:grid-cols-2 lg:grid-cols-4">
             <div className="border-b-2 border-ink/20 pb-4 sm:border-b-0 sm:border-r-2 sm:pb-0 sm:pr-4">
               <span className="label-mono text-signal">Kosten per stoel</span>
               <p className="display mt-1 text-4xl">€ 0,75</p>
