@@ -2,8 +2,11 @@
 
 export function euro(cents: number, opts: { short?: boolean } = {}): string {
   const whole = cents % 100 === 0;
-  if (opts.short && whole) return `€${cents / 100},-`;
-  return `€${(cents / 100).toFixed(2).replace(".", ",")}`;
+  const amount = cents / 100;
+  if (opts.short && whole) {
+    return `€${Math.round(amount).toLocaleString("nl-NL")},-`;
+  }
+  return `€${amount.toLocaleString("nl-NL", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
 }
 
 export function duration(minutes: number): string {

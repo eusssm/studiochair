@@ -132,7 +132,7 @@ export function ContactForm() {
             onChange={(e) => setFormData({ ...formData, currentSystem: e.target.value })}
             className="mt-2 block min-h-12 w-full border-2 border-ink bg-paper px-4 font-sans text-base shadow-brutal-sm outline-none focus:shadow-brutal"
           >
-            <option value="Treatwell">Treatwell (15-20% commissie)</option>
+            <option value="Treatwell">Treatwell (tot 35% commissie)</option>
             <option value="Salonized">Salonized</option>
             <option value="BarberBooking">BarberBooking</option>
             <option value="Ander">Ander systeem</option>

@@ -58,16 +58,16 @@ export default function B2BHomePage() {
               <li><a href="#vergelijking" className="underline-offset-4 hover:underline">Vergelijking</a></li>
               <li><a href="#tarieven" className="underline-offset-4 hover:underline">Tarieven</a></li>
             </ul>
-            <div className="flex items-center gap-2">
+            <div className="flex shrink-0 items-center gap-2">
               <Link
                 href="/demo"
-                className="brutal-press hidden h-9 items-center gap-1.5 border-2 border-ink bg-card px-3 font-mono text-xs font-bold uppercase shadow-brutal-sm sm:inline-flex sm:h-11 sm:px-4 sm:text-sm"
+                className="brutal-press hidden h-9 items-center gap-1.5 whitespace-nowrap border-2 border-ink bg-card px-3 font-mono text-xs font-bold uppercase shadow-brutal-sm sm:inline-flex sm:h-11 sm:px-4 sm:text-sm"
               >
                 Live Demo <Arrow className="size-3.5" />
               </Link>
               <a
                 href="#contact"
-                className="brutal-press inline-flex h-9 items-center justify-center border-2 border-ink bg-signal px-3 font-mono text-xs font-bold uppercase shadow-brutal-sm sm:h-11 sm:px-4 sm:text-sm"
+                className="brutal-press inline-flex h-9 items-center justify-center whitespace-nowrap border-2 border-ink bg-signal px-3 font-mono text-xs font-bold uppercase shadow-brutal-sm sm:h-11 sm:px-4 sm:text-sm"
               >
                 <span className="sm:hidden">Aanvragen</span>
                 <span className="hidden sm:inline">Voorstel Aanvragen</span>

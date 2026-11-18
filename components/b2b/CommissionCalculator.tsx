@@ -175,7 +175,7 @@ export function CommissionCalculator() {
               + {euro(yearlySavingsCents, { short: true })}
             </p>
             <p className="mt-2 font-mono text-xs font-bold">
-              Je betaalt slechts {euro(totalStudiochairYearlyCents, { short: true })} all-in per jaar aan StudioChair. De rest van de marge (€ {euro(yearlySavingsCents, { short: true })}) steek je direct zelf in je zak.
+              Je betaalt slechts {euro(totalStudiochairYearlyCents, { short: true })} all-in per jaar aan StudioChair. De rest van de marge ({euro(yearlySavingsCents, { short: true })}) steek je direct zelf in je zak.
             </p>
             <p className="mt-1 font-mono text-xs text-ink/80">
               Besparing over 3 jaar: <strong>{euro(threeYearSavingsCents, { short: true })}</strong>.
